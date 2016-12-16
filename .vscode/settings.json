@@ -1,0 +1,4 @@
+{
+    "typescript.check.workspaceVersion": true,
+    "html.suggest.angular1": false
+}

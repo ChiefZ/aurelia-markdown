@@ -1,0 +1,68 @@
+{
+  "name": "aurelia-markdown",
+  "version": "0.0.1",
+  "description": "Aurelia markdown plugin",
+  "main": "./dist/amd/aurelia-markdown.js",
+  "typings": "./dist/aurelia-markdown.d.ts",
+  "repository": "https://github.com/chiefz/aurelia-markdown",
+  "author": "ChiefZ",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "build": "yarn run clean && yarn run lint && echo Using TypeScript && tsc --version && tsc --pretty",
+    "test": "yarn run build && mocha --compilers ts:ts-node/register --recursive test/**/*.spec.ts",
+    "coverage": "yarn run build && nyc --require ts-node/register mocha test/**/*.spec.ts",
+    "watch": "yarn run build -- --watch",
+    "watch:test": "yarn run test -- --watch",
+    "watch:test2": "yarn run test2 -- --watch",
+    "release": "standard-version"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules/",
+      "dist/"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "devDependencies": {
+    "@types/chai": "3.4.30",
+    "@types/method-override": "0.0.29",
+    "@types/mocha": "2.2.29",
+    "@types/node": "6.0.31",
+    "@types/prismjs": "^1.4.18",
+    "@types/showdown": "^1.4.31",
+    "@types/sinon": "^1.16.33",
+    "aurelia-tools": "^1.0.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.1",
+    "nyc": "^10.0.0",
+    "require-dir": "^0.3.1",
+    "rimraf": "^2.5.4",
+    "sinon": "^1.17.6",
+    "standard-version": "^4.0.0",
+    "ts-node": "^1.2.2",
+    "tslint": "^4.0.2",
+    "typescript": "^2.1.4",
+    "yargs": "^6.5.0"
+  },
+  "dependencies": {
+    "aurelia-framework": "^1.0.8",
+    "prismjs": "^1.6.0",
+    "showdown": "^1.5.1"
+  }
+}

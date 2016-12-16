@@ -1,0 +1,15 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "curly": true,
+    "one-line": [
+      false
+    ],
+    "no-any": false,
+    "no-shadowed-variable": false,
+    "no-namespace": [
+      false
+    ],
+    "no-internal-module": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "amd",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "outDir": "dist/amd",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "es6",
+    "declarationDir": "dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "custom_typings/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
