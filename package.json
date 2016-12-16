@@ -1,6 +1,6 @@
 {
   "name": "aurelia-markdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Aurelia markdown plugin",
   "main": "./dist/amd/aurelia-markdown.js",
   "typings": "./dist/aurelia-markdown.d.ts",
